@@ -14,7 +14,8 @@ Le dépôt est organisé de manière modulaire. Chaque jour possède son propre 
 ├── 📁 Day01
 │   ├── 📄 input.txt       # Données du puzzle
 │   ├── 📄 README.md       # Énoncé et explication spécifique
-│   └── 🐍 solution.py     # Code source (ou .js, .rs, .go...)
+│   └── 🐍 step_1.py       # Code source en python
+│   └── 🐍 step_2.py 
 ├── 📁 Day02
 │   ├── ...
 ├── ...
@@ -45,8 +46,9 @@ Pour lancer une solution spécifique, naviguez dans le dossier du jour correspon
 *Exemple pour le jour 1 :*
 
 ```bash
-cd Day01
-python solution.py 
+cd Day_1
+python step_1.py
+python step_2.py 
 ```
 
 ## ❄️ À propos de l'Advent of Code
