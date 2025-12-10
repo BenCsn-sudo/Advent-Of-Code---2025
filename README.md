@@ -27,12 +27,15 @@ Voici l'état d'avancement de ma récolte d'étoiles.
 
 | Jour | Challenge | Partie 1 | Partie 2 | Solution |
 | :---: | :--- | :---: | :---: | :---: |
-| 01 | [Day 1: TBD](https://adventofcode.com/2025/day/1) | ⭐ | ⭐ | [Voir](https://www.google.com/search?q=./Day01/) |
-| 02 | [Day 2: TBD](https://adventofcode.com/2025/day/2) | ⭐ | ⭐ | [Voir](https://www.google.com/search?q=./Day02/) |
-| 03 | [Day 3: TBD](https://adventofcode.com/2025/day/3) | ⭐ | ⭐ | [Voir](https://www.google.com/search?q=./Day03/) |
-| 04 | [Day 4: TBD](https://adventofcode.com/2025/day/4) | ⭐ | ⭐ | [Voir](https://www.google.com/search?q=./Day04/) |
-| 05 | ... | ⬜ | ⬜ | ... |
-
+| 01 | [Day 1: TBD](https://adventofcode.com/2025/day/1) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_1) |
+| 02 | [Day 2: TBD](https://adventofcode.com/2025/day/2) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_2) |
+| 03 | [Day 3: TBD](https://adventofcode.com/2025/day/3) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_3) |
+| 04 | [Day 4: TBD](https://adventofcode.com/2025/day/4) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_4) |
+| 05 | [Day 5: TBD](https://adventofcode.com/2025/day/5) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_5) |
+| 06 | [Day 6: TBD](https://adventofcode.com/2025/day/6) | ⭐ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_6) |
+| 07 | [Day 7: TBD](https://adventofcode.com/2025/day/7) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_7) |
+| 08 | [Day 8: TBD](https://adventofcode.com/2025/day/8) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_8) |
+| 09 | [Day 9: TBD](https://adventofcode.com/2025/day/9) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_9) |
 *(Légende : ⭐ = Complété | ⬜ = Pas encore fait)*
 
 ## 🚀 Comment exécuter les solutions
@@ -43,10 +46,7 @@ Pour lancer une solution spécifique, naviguez dans le dossier du jour correspon
 
 ```bash
 cd Day01
-# Commande selon ton langage, par exemple :
 python solution.py 
-# ou
-go run main.go
 ```
 
 ## ❄️ À propos de l'Advent of Code
