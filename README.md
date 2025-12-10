@@ -56,7 +56,3 @@ L'[Advent of Code](https://adventofcode.com/) est un calendrier de l'Avent compo
 -----
 
 *Codé avec ❤️, ☕ et quelques 🍪 de Noël.*
-
------
-
-### Souhaites-tu un petit script (Python ou Bash) pour générer automatiquement cette structure de dossiers chaque jour (télécharger l'input + créer le dossier) ?
