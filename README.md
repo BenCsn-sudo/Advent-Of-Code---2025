@@ -37,6 +37,7 @@ Voici l'état d'avancement de ma récolte d'étoiles.
 | 07 | [Day 7: TBD](https://adventofcode.com/2025/day/7) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_7) |
 | 08 | [Day 8: TBD](https://adventofcode.com/2025/day/8) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_8) |
 | 09 | [Day 9: TBD](https://adventofcode.com/2025/day/9) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_9) |
+
 *(Légende : ⭐ = Complété | ⬜ = Pas encore fait)*
 
 ## 🚀 Comment exécuter les solutions
