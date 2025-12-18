@@ -1,9 +1,3 @@
-Voici le fichier `README.md` pour le Jour 6, rédigé exactement dans le même style que celui du Jour 5, en intégrant les spécificités de tes scripts `step_1.py` et `step_2.py`.
-
-Tu n'as plus qu'à copier-coller ce contenu dans ton fichier.
-
----
-
 # 🎄 Advent of Code 2025 - Jour 6
 
 ## 🗑️ Trash Compactor (Le Compacteur à Ordures)
