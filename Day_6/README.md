@@ -1,12 +1,24 @@
-# 🎄 Advent of Code - Day 6: Trash Compactor
+Voici le fichier `README.md` pour le Jour 6, rédigé exactement dans le même style que celui du Jour 5, en intégrant les spécificités de tes scripts `step_1.py` et `step_2.py`.
 
-## 📖 Description du Problème
+Tu n'as plus qu'à copier-coller ce contenu dans ton fichier.
 
-Après une chute malencontreuse dans un compacteur à ordures du Pôle Nord, nous nous retrouvons coincés avec une famille de céphalopodes. En attendant qu'ils ouvrent la porte, nous devons aider le plus jeune d'entre eux à faire ses devoirs de mathématiques.
+---
 
-Le défi consiste à déchiffrer une feuille de calcul où les problèmes ne sont pas écrits de manière linéaire, mais **verticalement**, sous forme de grille.
+# 🎄 Advent of Code 2025 - Jour 6
 
-### Exemple d'Input
+## 🗑️ Trash Compactor (Le Compacteur à Ordures)
+
+Après avoir traversé la cuisine, je prends une pause bien méritée... qui se transforme en chute libre dans le vide-ordures ! Je me retrouve coincé dans un compacteur avec une famille de céphalopodes. La porte est scellée magnétiquement et, en attendant qu'ils la débloquent, ils me demandent de l'aide pour les devoirs de mathématiques du petit dernier.
+
+C'est parti pour du tutorat de mathématiques inter-espèces (et pour survivre).
+
+---
+
+### 📝 Le Problème
+
+L'input est une feuille de calcul mathématique, mais elle ne ressemble à rien de connu. Les problèmes ne sont pas écrits ligne par ligne, mais **verticalement**, sous forme de colonnes, et séparés par des colonnes vides.
+
+#### Exemple de données :
 
 ```text
 123 328  51
@@ -15,46 +27,56 @@ Le défi consiste à déchiffrer une feuille de calcul où les problèmes ne son
 * +    *
 ```
 
-Les nombres sont alignés verticalement et l'opérateur (`+` ou `*`) se trouve tout en bas de la colonne.
+### ⭐ Partie 1 : Mathématiques Verticales
 
-## 🛠️ Approche Technique
+L'objectif est de lire la grille colonne par colonne (de gauche à droite). Chaque colonne représente une liste de nombres à traiter avec l'opérateur situé tout en bas (`+` ou `*`).
 
-La solution a été développée en **Python**. La principale difficulté résidait dans le parsing (l'analyse) du fichier texte, car les données doivent être lues colonne par colonne et non ligne par ligne.
+Mon script `step_1.py` s'attaque à ce parsing visuel :
+* Il sépare les blocs de nombres grâce aux colonnes vides.
+* Il gère l'initialisation des calculs (attention à ne pas multiplier par 0 au départ !).
+* Il additionne le résultat de chaque problème individuel.
 
-### Structure du Code
-Le script `step_1.py` implémente la logique suivante :
+**Résultat :** Il fallait faire abstraction des lignes pour voir les colonnes.
 
-1.  **Lecture et Nettoyage** : Le fichier est lu et séparé en lignes.
-2.  **Création de la Matrice** : Chaque ligne est découpée (`split()`) pour former un tableau à deux dimensions (`table`), permettant d'accéder aux données via des coordonnées `[ligne][colonne]`.
-3.  **Identification des Opérateurs** : Le script scanne la dernière ligne de la matrice pour déterminer l'opération à effectuer (Addition ou Multiplication).
-4.  **Calcul Vertical** : Une boucle itère sur chaque colonne, accumulant les résultats selon l'opérateur identifié.
+### ⭐⭐ Partie 2 : Logique Céphalopode
 
-### 🌟 Partie 1 : Calculs Verticaux Standards
-L'objectif était de sommer les résultats de chaque colonne indépendamment.
-* **Logique** : Pour chaque colonne, si l'opérateur est `+`, on additionne les nombres. Si c'est `*`, on les multiplie.
-* **Gestion du Zéro** : Une condition spécifique (`if result == 0`) a été implémentée pour gérer l'initialisation lors des multiplications et éviter de multiplier par zéro au démarrage.
-* **Résultat obtenu** : `5782351442566`
+Les céphalopodes reviennent et m'expliquent que je lis tout de travers ! Leur mathématique se lit **de droite à gauche**. De plus, une colonne ne contient pas *plusieurs* nombres, mais **un seul nombre** écrit verticalement (chiffre des milliers en haut, unités en bas).
 
-### 🌟 Partie 2 : Mathématiques Céphalopodes (Logic)
-Dans cette partie, la lecture change radicalement : les colonnes se lisent de droite à gauche, et chaque colonne représente un seul nombre entier (le chiffre du haut étant le plus significatif).
+Mon script `step_2.py` adapte la logique :
+* **Lecture inversée :** On parcourt les colonnes en partant de la fin (droite vers gauche).
+* **Padding :** Utilisation de `.ljust()` pour égaliser la longueur des lignes (les espaces sont cruciaux ici).
+* **Construction de nombre :** Chaque colonne est concaténée verticalement pour former un entier unique avant d'appliquer l'opération.
 
-* **Interprétation** : Chaque colonne est parsée comme une suite de chiffres formant un grand nombre (ex: une colonne contenant 1, 4, 6 devient le nombre 146).
-* **Calcul** : Les opérations sont ensuite appliquées sur ces nouveaux nombres formés.
-* **Résultat** : Le grand total a été recalculé selon ces nouvelles règles de lecture "droite-à-gauche".
+> **Note :** La difficulté principale ici était de changer complètement le sens de lecture et la méthode de construction des nombres sans casser la logique de détection des séparateurs.
 
-## 🚀 Utilisation
+-----
 
-Pour lancer le script et voir le résultat :
+### 🚀 Résultats
 
+| Partie | Réponse | Étoile |
+| :--- | :--- | :---: |
+| **Partie 1** | **5 782 351 442 566** | ⭐ |
+| **Partie 2** | **3 263 827** | ⭐ |
+
+*(Note : J'ai mis le résultat de l'exemple pour la partie 2 dans le tableau, pense à le remplacer par ta vraie réponse générée par `step_2.py`)*
+
+-----
+
+### 🛠️ Comment lancer la solution
+
+J'ai séparé la logique en deux fichiers distincts pour plus de clarté.
+
+Pour la partie 1 (Lecture gauche-droite classique) :
 ```bash
 python step_1.py
+
 ```
 
-Assurez-vous que le fichier `input.txt` est présent dans le même répertoire que le script.
+Pour la partie 2 (Lecture droite-gauche céphalopode) :
 
-## 📂 Organisation des Fichiers
+```bash
+python step_2.py
 
-* `input.txt` : Les données du puzzle (la grille de nombres).
-* `step_1.py` : Le script principal contenant la logique de parsing matriciel et de calcul.
+```
 
----
+*Merci aux céphalopodes pour cette leçon de perspective !* 🐙
