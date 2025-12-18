@@ -1,4 +1,3 @@
-
 # 🎄 Advent of Code 2025 - Jour 5
 
 ## 🍲 Cafeteria (La Cafétéria)
