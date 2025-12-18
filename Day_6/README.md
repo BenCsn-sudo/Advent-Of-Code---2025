@@ -50,9 +50,7 @@ Mon script `step_2.py` adapte la logique :
 | Partie | Réponse | Étoile |
 | :--- | :--- | :---: |
 | **Partie 1** | **5 782 351 442 566** | ⭐ |
-| **Partie 2** | **3 263 827** | ⭐ |
-
-*(Note : J'ai mis le résultat de l'exemple pour la partie 2 dans le tableau, pense à le remplacer par ta vraie réponse générée par `step_2.py`)*
+| **Partie 2** | **10 194 584 711 842** | ⭐ |
 
 -----
 
@@ -63,14 +61,12 @@ J'ai séparé la logique en deux fichiers distincts pour plus de clarté.
 Pour la partie 1 (Lecture gauche-droite classique) :
 ```bash
 python step_1.py
-
 ```
 
 Pour la partie 2 (Lecture droite-gauche céphalopode) :
 
 ```bash
 python step_2.py
-
 ```
 
-*Merci aux céphalopodes pour cette leçon de perspective !* 🐙
+*Merci aux céphalopodes pour leurs méthodes de maths tordus !* 🐙
