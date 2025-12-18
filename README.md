@@ -33,7 +33,7 @@ Voici l'état d'avancement de ma récolte d'étoiles.
 | 03 | [Day 3: TBD](https://adventofcode.com/2025/day/3) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_3) |
 | 04 | [Day 4: TBD](https://adventofcode.com/2025/day/4) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_4) |
 | 05 | [Day 5: TBD](https://adventofcode.com/2025/day/5) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_5) |
-| 06 | [Day 6: TBD](https://adventofcode.com/2025/day/6) | ⭐ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_6) |
+| 06 | [Day 6: TBD](https://adventofcode.com/2025/day/6) | ⭐ | ⭐ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_6) |
 | 07 | [Day 7: TBD](https://adventofcode.com/2025/day/7) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_7) |
 | 08 | [Day 8: TBD](https://adventofcode.com/2025/day/8) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_8) |
 | 09 | [Day 9: TBD](https://adventofcode.com/2025/day/9) | ⬜ | ⬜ | [Voir](https://github.com/BenCsn-sudo/Advent-Of-Code---2025/tree/main/Day_9) |
