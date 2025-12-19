@@ -1,27 +1,81 @@
-# AdventOfCode---Day1
+# 🎄 Advent of Code - Day 1: Secret Entrance
 
-# 🔐 North Pole Safe Cracker
+## 🔐 Secret Entrance (L'Entrée Secrète)
 
-**Résolution d'un puzzle logique : simulation d'un cadran de coffre-fort (0-99). Le script parse une liste de rotations (G/D) et utilise l'arithmétique modulaire pour compter combien de fois le curseur s'arrête sur 0, révélant ainsi le mot de passe caché.**
+Les Elfes ont enfin découvert la gestion de projet ! Mais avant de commencer à décorer le Pôle Nord, nous devons entrer dans la base. Le mot de passe a changé et se trouve dans un coffre-fort protégé par un cadran rotatif numéroté de 0 à 99.
 
-## 🎄 Contexte
-Les Elfes ont perdu le mot de passe du coffre-fort du Pôle Nord. Pour l'ouvrir, il faut suivre une liste d'instructions de rotation sur un cadran circulaire numéroté de 0 à 99. Le "vrai" mot de passe n'est pas la position finale, mais le nombre de fois où le cadran s'arrête exactement sur la position **0**.
+Le coffre est en réalité un leurre : la véritable clé réside dans l'analyse des mouvements du cadran.
 
-## ⚙️ Fonctionnement Technique
-Le script Python simule le mouvement du cadran en appliquant des opérations mathématiques sur la position courante :
+---
 
-1.  **Parsing** : Lecture du fichier `input.txt` et découpage des instructions (ex: `R15`, `L99`).
-2.  **Arithmétique Modulaire** : Utilisation de l'opérateur modulo (`% 100`) pour gérer la circularité du cadran (0-99).
-    * Rotation Droite (R) : `(pos + n) % 100`
-    * Rotation Gauche (L) : `(pos - n) % 100`
-3.  **Logique** : 
-    * Position initiale : **50**
-    * Incrémentation du compteur de résultat à chaque passage à 0.
+### 📝 Le Problème
 
-## 🚀 Utilisation
+Nous disposons d'une liste d'instructions de rotation (ex: `R5`, `L10`...).
 
-1. Assurez-vous d'avoir le fichier de données `input.txt` dans le même dossier.
-2. Lancez le script :
+* Le cadran commence à la position **50**.
+* Il contient 100 positions (0-99).
+* **R** (Right) augmente la valeur (sens horaire).
+* **L** (Left) diminue la valeur (sens anti-horaire).
+* Le cadran est circulaire : après 99 on retourne à 0, et avant 0 on retourne à 99.
+
+### ⭐ Partie 1 : La position finale
+
+L'objectif est de compter combien de fois le cadran **s'arrête** sur la position `0` à la fin d'une instruction.
+
+**Approche Code (`step_1.py`) :**
+La solution utilise l'arithmétique modulaire pour gérer la circularité du cadran sans faire de boucles complexes.
+
+* Mise à jour : `position = (position + valeur) % 100`.
+* Vérification simple après chaque mouvement : `if position == 0`.
+
+**Réponse :** 982
+
+### ⭐⭐ Partie 2 : Le passage par zéro
+
+La sécurité a été renforcée ("Method 0x434C49434B"). Il ne suffit plus de s'arrêter sur zéro, il faut compter **chaque fois que le cadran touche ou traverse le zéro** pendant la rotation.
+
+**Approche Code (`step_2.py`) :**
+Ici, le modulo ne suffit plus car il ne nous dit pas ce qui s'est passé *pendant* le mouvement.
+
+1. **Calcul de la distance vers zéro** :
+* Vers la droite (`R`) : `100 - position`.
+* Vers la gauche (`L`) : `position` (ou `100` si on est déjà sur 0).
+
+
+2. **Détection du croisement** :
+* Si le mouvement est plus grand que la distance vers zéro, on a croisé au moins une fois (`result += 1`).
+* Si le mouvement est très grand, on compte les tours complets supplémentaires : `(valeur - dist_vers_zero) // 100`.
+
+
+---
+
+### 🚀 Résultats
+
+| Partie | Réponse | Étoile |
+| --- | --- | --- |
+| **Partie 1** | **982** | ⭐ |
+| **Partie 2** | **386** | ⭐ |
+
+*(Note : La réponse de la partie 2 est calculée par le script `step_2.py`)*
+
+---
+
+### 🛠️ Comment lancer la solution
+
+J'ai séparé la logique en deux fichiers distincts pour plus de clarté.
+
+Pour la partie 1 (Compter les arrêts sur 0) :
 
 ```bash
-python main.py
+python step_1.py
+
+```
+
+Pour la partie 2 (Compter les passages par 0) :
+
+```bash
+python step_2.py
+
+```
+
+*Le Pôle Nord est ouvert, place à la décoration !* 🎄
